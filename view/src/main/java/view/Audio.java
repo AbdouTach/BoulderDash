@@ -21,6 +21,7 @@ public class Audio implements IAudio{
 		clip = AudioSystem.getClip();
 		clip.open(AudioSystem.getAudioInputStream(Sound));
 		clip.start();
+		clip2.stop();	
 		FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
 		volume.setValue(gain);
 		}
